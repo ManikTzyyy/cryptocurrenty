@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  
+}
+
+.container-navbar a {
+  transition: 0.5s;
+  transition: transform 0.3s ease;
+  letter-spacing: 0.1em;
+}
+
+.container-navbar a:hover {
+  letter-spacing: 0.25em;
+  
+}
+
+.container-navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #2d2d2dc3; /* Ubah sesuai kebutuhan */
+  z-index: 1000; /* Sesuaikan kebutuhan jika diperlukan */
+  border-radius: 0 0 30px 30px;
+  color: white;
+  
+}
+body{
+  background-image: linear-gradient(to right top, #211c6a 55%, #fc6736 95%);
+}
+
+.container-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+
+.background {
+  position: fixed; /* Menggunakan fixed agar gambar tetap di tempat ketika digulir */
+  z-index: -999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: auto; /* Untuk menyesuaikan gambar agar mengisi seluruh area */
+  background-repeat: no-repeat; /* Untuk menghindari pengulangan gambar */
+}
+
+
+
+
+.container-box{
+    background-color:rgba(0, 0, 0, 0.463) ;
+    width: 45vh;
+    height: auto;
+    padding: 20px 20px 0 20px;
+    z-index: 10;
+    color: rgb(255, 255, 255);
+    margin: 20px 20px 20px 20px;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    animation: shadowAnimation 15s infinite;
+    transition: transform 0.3s ease;
+}
+.container-box-sp{
+    background-color:rgba(0, 0, 0, 0.463) ;
+    width: 45vh;
+    height: auto;
+    padding: 20px 20px 0 20px;
+    z-index: 10;
+    color: rgb(255, 255, 255);
+    margin: 20px 20px 20px 20px;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    animation: shadowAnimation 15s infinite;
+    transition: transform 0.3s ease;
+
+}
+
+.card-coin h5 {
+  display: flex; /* Menggunakan flexbox agar mudah mengatur posisi ikon dan teks */
+  align-items: center; /* Memastikan ikon dan teks sejajar secara vertikal */
+}
+
+.card-coin h5 i {
+  margin-right: 10px; /* Atur margin kanan pada ikon */
+}
+
+
+.container-box-sp img{
+  width: 2em;
+  height: auto;
+}
+
+.container-box-sp .icon{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px; 
+}
+
+.container-box-sp .card-coin {
+  display: flex;
+  align-items: center;
+}
+
+.container-box-sp .card-coin h5 {
+  margin-top: 0;
+  margin-bottom: 0; 
+  vertical-align: middle; 
+}
+
+.container-box:hover {
+  transform: scale(1.1); /* Menambahkan efek zoom ketika hover */
+}
+.container-box-sp:hover {
+  transform: scale(1.1); /* Menambahkan efek zoom ketika hover */
+}
+
+@keyframes shadowAnimation {
+  0% {box-shadow: 0px 0px 15px 1px #35374B;}
+  20% {box-shadow: 0px 0px 15px 1px #344955}
+  40% {box-shadow: 0px 0px 15px 1px #50727B;}
+  60% {box-shadow: 0px 0px 15px 1px #78A083;}
+  80% {box-shadow: 0px 0px 15px 1px #50727B;}
+  100% {box-shadow: 0px 0px 15px 1px #344955}
+  
+}
+
+.br {
+  padding-bottom: 10vh;
+}
+
+
+
+
+.container-box p{
+  filter: drop-shadow(0 0 10px rgb(0, 0, 0));
+  letter-spacing: 2px;
+}
+.container-box-sp p{
+  filter: drop-shadow(0 0 10px rgb(0, 0, 0));
+  letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .container-content{
+    padding-top: 2vh;
+    height: 100%;
+    padding-bottom: 50%;
+  }
+
+  .container-box{
+    margin-top: 2vh;
+    
+
+  }
+  .container-box-sp{
+    margin-top: 2vh;
+    
+
+  }
+
+  .br {
+    padding-bottom: 10vh;
+  }
+
+
+}
